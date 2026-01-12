@@ -12,18 +12,30 @@
 
     <a href="{% url 'crear_estudiante' %}">Nuevo Estudiante</a>
 
+    <!-- En lista_estudiante.html -->
     <ul>
         {% for estudiante in estudiantes %}
         <li>
             {{ estudiante.nombre }} - {{ estudiante.edad }} - {{ estudiante.email }}-{{ estudiante.ciudad }}
             <a href="{% url 'editar_estudiante' estudiante.id %}">Editar</a>
-            <a href="{% url 'eliminar_estudiante' estudiante.id %}">Eliminar</a>
+
+            <!-- Botón con confirmación -->
+            <form method="POST" action="{% url 'eliminar_estudiante' estudiante.id %}" style="display: inline;"
+                onsubmit="return confirmDelete('{{ estudiante.nombre }}')">
+                {% csrf_token %}
+                <button type="submit" style="color: red; border: none; background: none; cursor: pointer;">
+                    Eliminar
+                </button>
+            </form>
         </li>
-        {% empty %}
-        <li>No hay estudiantes</li>
         {% endfor %}
     </ul>
 
+    <script>
+        function confirmDelete(nombre) {
+            return confirm(`¿Estás seguro de eliminar a ${nombre}?`);
+        }
+    </script>
 </body>
 
 </html>
