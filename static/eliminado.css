@@ -1,0 +1,92 @@
+/* eliminado.css */
+.confirmacion-container {
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 40px;
+}
+
+.icono-alerta {
+    font-size: 4rem;
+    color: #f44336;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.mensaje-confirmacion {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 25px 0;
+}
+
+.mensaje-confirmacion h2 {
+    color: #856404;
+    margin-bottom: 10px;
+}
+
+.mensaje-confirmacion p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.detalles-estudiante {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.detalle-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.detalle-item:last-child {
+    border-bottom: none;
+}
+
+.detalle-label {
+    font-weight: 600;
+    color: #2e7d32;
+}
+
+.detalle-valor {
+    color: #333;
+}
+
+.acciones-confirmacion {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.acciones-confirmacion .btn {
+    flex: 1;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.btn-cancelar {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-cancelar:hover {
+    background-color: #545b62;
+}
+
+.btn-confirmar {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-confirmar:hover {
+    background-color: #d32f2f;
+    box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+}

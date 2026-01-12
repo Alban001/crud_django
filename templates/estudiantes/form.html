@@ -1,23 +1,28 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'form.css' %}">
+    <title>Formulario Estudiante</title>
 </head>
 
 <body>
-    <h1>Formulario Estudiante</h1>
+    <div class="form-container">
+        <h1>Formulario Estudiante</h1>
 
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Guardar</button>
-    </form>
-
-    <a href="{% url 'lista_estudiante' %}">Volver</a>
-
+        <form method="post" class="formulario-estudiante">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                <a href="{% url 'lista_estudiante' %}" class="btn btn-secondary">Volver</a>
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>
