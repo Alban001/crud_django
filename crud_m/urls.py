@@ -21,7 +21,7 @@ from estudiante.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', crearEstudiante, name="crear_estudiante"),
-    path('lista_estudiantes/', listarEstudiante, name="listar_estudiante"),
-    path('editar_estudiante/<int:id>', editarEstudiantes, name="editar_estudiante"),
+    path('lista_estudiantes/', listarEstudiante, name="lista_estudiante"),
+    path('editar_estudiante/<int:id>', editarEstudiante, name="editar_estudiante"),
     path('eliminar_estudiante/<int:id>',eliminarEstudiante, name="eliminar_estudiante"),
 ]
