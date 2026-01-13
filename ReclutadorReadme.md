@@ -8,8 +8,8 @@ si hay contenedores en uso probar docker run -d -p 8001:8000 --name django-app c
 # 3. Abrir en navegador,o según el puerto elegido:
 # http://localhost:8000
 
-# Si surge problemas con permiso de usuario
+# Si surge problemas con permiso de usuario para usuarios LINUX
 
-sudo usermod -aG docker $USER
-newgrp docker
-docker run -d -p 8000:8000 --name django-django crud_m
+- sudo usermod -aG docker $USER
+- newgrp docker
+- docker run -d -p 8000:8000 --name django-django crud_m
